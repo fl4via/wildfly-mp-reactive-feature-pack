@@ -80,7 +80,6 @@ public class ContextPropagationClientTestCase {
                 .statusCode(Response.Status.OK.getStatusCode());
     }
 
-    @Ignore("TODO we don't have RestEasy context propagation yet")
     @Test
     public void testRESTEasyManagedExecutorPropagation() {
         RestAssured.when().get(url.toExternalForm() + "context/resteasy").then()

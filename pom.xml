@@ -63,6 +63,7 @@
         <version.org.eclipse.microprofile.reactive-streams-operators>1.0.1</version.org.eclipse.microprofile.reactive-streams-operators>
         <version.org.jboss.arquillian.junit>1.4.0.Final</version.org.jboss.arquillian.junit>
         <version.org.jboss.galleon>4.2.5.Final</version.org.jboss.galleon>
+        <version.org.jboss.resteasy>3.13.0-SNAPSHOT</version.org.jboss.resteasy>
         <version.org.reactivestreams>1.0.3</version.org.reactivestreams>
         <version.org.testcontainers>1.12.4</version.org.testcontainers>
         <!-- Same testng version as the MP TCK uses -->
@@ -654,6 +655,17 @@
                 <groupId>org.eclipse.microprofile.reactive-streams-operators</groupId>
                 <artifactId>microprofile-reactive-streams-operators-core</artifactId>
                 <version>${version.org.eclipse.microprofile.reactive-streams-operators}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-context-propagation</artifactId>
+                <version>${version.org.jboss.resteasy}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
